@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script 
+    src="https://kit.fontawesome.com/3da1a747b2.js"
+    crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles3.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Word Password Generator</h2>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label>Password Length</label>
+                <input type="number" style="font-size: 18px;" id="length" min='4' max='9' value='4' />
+            </div>
+            <span id="entropy"></span>
+            <button class="btn btn-large" id="generate">
+                Generate password
+            </button>
+            <p>Word passwords are easier to remember but harder to crack by brute force algorithms.</p>
+        </div>
+    </div>
+    
+   <a class='color4' href="passgen.html">Click here to generate a random password!</a>
+   <a class='color5' href="index.html">Click here to go back to the main page.</a>
+   <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+   <script src="wordgen.js"></script>
+</body>
+</html>

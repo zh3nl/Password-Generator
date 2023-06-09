@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: #ffffff;
+	--typewriterSpeed: 3s;
+	--typewriterCharacters: 24;
+  }
+  
+body {
+	background-color: #ffffff;
+    color: rgb(0, 0, 0) ;
+	display: flex;
+	font-family: "Source Code Pro", monospace;
+    font-size: 36px;
+    font-style: italic;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 100vh;
+	background-image: linear-gradient(to right top, magenta, orange,yellow );
+	background-size: 400%;
+	animation: bg-animation 5s infinite alternate; 
+}
+
+@keyframes bg-animation  {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+
+a {
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+	text-decoration: none;
+	
+	border: 3px solid black;
+	box-shadow: 8px 8px 0px black;
+	transition: 0.5s all;
+}
+
+.color1 {
+	background: gold;
+}
+
+.color2 {
+	background: hotpink;
+}
+
+a:hover {
+	box-shadow: none; 
+	transform: translate(10px, 10px);
+}
+
+p {
+	margin: 5px 0;
+}
+
+.box {
+	background-color: hwb(0 100% 0%);
+	padding: 20px;
+	margin-bottom: 10px;
+	width: 1000px;
+	max-width: 100%;
+	border: 2px solid black;
+	box-shadow: 15px 15px 0px black;
+	
+}
+
+.box2 {
+	background-color: hwb(324 70% 0%);
+	padding: 20px;
+	margin-bottom: 10px;
+	width: 1600px;
+	height: 50px;
+	max-width: 100%;
+	border: 2px solid black;
+	box-shadow: 8px 8px 0px black;
+	transform: translate(0px, 175px);
+}
+
+h2 {
+	font-size: 24px;
+	position: relative;
+	font-family: "Source Code Pro", monospace;
+	position: relative;
+	width: max-content;
+	transform: translate(0px, -29px);
+}
+
+h1 {
+	font-size: 60px;
+	position: relative;
+	font-family: "Source Code Pro", monospace;
+	position: relative;
+	width: max-content;
+
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+	background: var(--bg-color);
+	animation: typewriter var(--typewriterSpeed)
+	  steps(var(--typewriterCharacters)) 1s forwards;
+  }
+
+h1::after {
+	width: 0.125em;
+	background: black;
+	animation: typewriter var(--typewriterSpeed)
+		steps(var(--typewriterCharacters)) 1s forwards,
+	  blink 900ms steps(var(--typewriterCharacters)) infinite;
+  }
+
+
+
+  @keyframes typewriter {
+	to {
+	  left: 100%;
+	}
+  }
+  
+  @keyframes blink {
+	to {
+	  background: transparent;
+	}
+  }
+  
+  @keyframes fadeInUp {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
+

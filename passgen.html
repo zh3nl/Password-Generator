@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script 
+    src="https://kit.fontawesome.com/3da1a747b2.js"
+    crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="setting">
+            <div class="setting">
+                <label>Password Length</label>
+                <input type="number" style="font-size: 18px; transform: translate(475px, 0px)"; id="length" min='8' max='20' value='8' />
+            </div>
+        </div>
+        <span id="entropy"></span>
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+        <p> It is recommended to have a password that is at least 8 characters long with a mix of upper and lowercase letters, numbers, and symbols!</p>
+    </div>
+    <script src="main.js"></script>
+    <a class="color" href="index.html">Click here to go back to the main page.</a>
+    <a class="color1" href="wordpassgen.html">Click here to generate a word password.</a>
+</body>
+</html>
